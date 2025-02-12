@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=""utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rag1</title>
+        <link href="{{url_for('static',filename='rag1.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
+ </head>
+
+    <body>
+        
+        <div id="fullscreen">
+        <div id="screen2">
+            <div class="flex-container" >
+            <div class="sc-searchbox">
+                <input required type="text" 
+                       class="sc-searchbox-field"/>
+                <div class="sc-searchbox-placeholder">
+                </div>
+              </div>
+              <div role="tablist" class="worktab">
+                <button type="button" class="tabbutton" role="tab" aria-selected="true" aria-controls="panel1" id="tab1">비서 목록</button>
+                <button type="button" class="tabbutton" role="tab" aria-selected="false" aria-controls="panel2" id="tab2">즐겨찾기 비서</button>
+              </div>
+            
+            <div class="ppp" role="tabpanel" id="tab1" aria-labelledby="panel1">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <button class="bbutton">
+                                <div>
+                                    <span>근로법</span>
+                                </div>
+                                <div>근로기준법 전문가</div>
+                            </button></div>
+                            <div class="swiper-slide">
+                            <button class="bbutton">
+                                <div>
+                                    <span>농업</span>
+                                </div>
+                                <div>농업 전문가</div>
+                            </button></div>
+                            <div class="swiper-slide">
+                            <button class="bbutton" onclick="location.href='/ai3'">
+                                <div>
+                                    <span>멀티 AI</span>
+                                </div>
+                                <div>원하는 AI 선택하여 사용</div>
+                            </button></div>
+                            <div class="swiper-slide">
+                            <button class="bbutton">
+                                <div>
+                                    <span>컨설팅</span>
+                                </div>
+                                <div>컨설팅 전문가</div>
+                            </button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-state="active" data-orientation="horizontal" role="tabpanel" id="tab2" aria-labelledby="panel2" hidden>근로기준법</div>
+        </div>
+    </div>
+        
+    <script>
+        def 
+    </script>
+</body>
+</html>

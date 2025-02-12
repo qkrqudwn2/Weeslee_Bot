@@ -1,0 +1,136 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    background-color: var(--whiteSmoke);
+}
+
+
+.fullscreen{
+    height: 100%;
+    width: 100%;
+}
+.screen1{
+	width: 400px;
+	height: 1000px;
+	background-color: rgb(255, 255, 255);
+	float: left;
+}
+.screen2{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+	float: center;
+}
+.screen3{
+	width: 400px;
+	height: 1000px;
+	background-color: rgb(255, 255, 255);
+	float: right;
+}
+
+.flex-container{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin:5px;
+    background-color:rgb(255, 255, 255);
+    
+}
+
+.sc-searchbox{
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sc-searchbox-field{
+    height:30px;
+    width:800px;
+    padding:16px 16px 16px 48px;
+    
+    background-color:rgba(0,0,0,0.05);
+    border-radius:40px;
+    border:0;
+    outline:none;
+}
+.sc-searchbox-placeholder{
+    position:absolute;
+    display:flex;
+    
+    height:100%;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    top:0;
+    left:0;
+    
+    color:rgba(0,0,0,0.6);
+    
+    pointer-events:none;
+    transition:ease-in-out .2s;
+}
+.sc-searchbox-placeholder-icon{
+    margin-right:40%;
+}
+  
+.sc-searchbox-field:focus ~ .sc-searchbox-placeholder, .sc-searchbox-field:valid ~ .sc-searchbox-placeholder{
+    transform: translate3d(10%, 0px, 0px);
+}
+
+.worktab{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tabbutton{
+    width: 150px;
+    height: 50px;
+}
+
+swiper-grid>.swiper-wrapper {
+    flex-wrap: wrap;
+}
+
+.ppp{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.swiper {
+    position: absolute;
+    top: 65%;
+    left: 54%;
+    width: 1500px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 1300px;
+    height: 300x;
+    gap: 1rem;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    width: 120px;
+    height: 60px;
+}
+
+.bbutton{
+    height:100%;
+    width:100%;
+}
+
+/*사이드 메뉴*/
