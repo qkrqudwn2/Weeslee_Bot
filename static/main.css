@@ -6,39 +6,9 @@ body {
     background-color: var(--whiteSmoke);
 }
 
-
 .fullscreen{
     height: 100%;
     width: 100%;
-}
-.screen1{
-	width: 400px;
-	height: 1000px;
-	background-color: rgb(255, 255, 255);
-	float: left;
-}
-.screen2{
-	width: 100%;
-	height: 100%;
-	background-color: rgb(255, 255, 255);
-	float: center;
-}
-.screen3{
-	width: 400px;
-	height: 1000px;
-	background-color: rgb(255, 255, 255);
-	float: right;
-}
-
-.flex-container{
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 10px;
-    margin:5px;
-    background-color:rgb(255, 255, 255);
-    
 }
 
 .sc-searchbox{
@@ -81,18 +51,6 @@ body {
     transform: translate3d(10%, 0px, 0px);
 }
 
-.worktab{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.tabbutton{
-    width: 150px;
-    height: 50px;
-}
-
 swiper-grid>.swiper-wrapper {
     flex-wrap: wrap;
 }
@@ -101,21 +59,29 @@ swiper-grid>.swiper-wrapper {
     position: absolute;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 2000px;
+    height: 400px;
+    top: 57%;
+    left: 51%;
+    transform: translate(-50%, -50%);
 }
 .swiper {
+    display: none;
     position: absolute;
     top: 65%;
-    left: 54%;
+    left: 53.6%;
     width: 1500px;
     height: 300px;
     transform: translate(-50%, -50%);
+}
+.swiper.active{
+    display: flex;
 }
 
 .swiper-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 1300px;
     height: 300x;
     gap: 1rem;
@@ -123,14 +89,51 @@ swiper-grid>.swiper-wrapper {
 
 .swiper-slide {
     font-size: 18px;
-    background: #fff;
-    width: 120px;
-    height: 60px;
+    width: 180px;
+    height: 80px;
 }
 
 .bbutton{
-    height:100%;
-    width:100%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 1.1rem;
+    background-color: #d9e3fd;
 }
 
-/*사이드 메뉴*/
+/*탭 메뉴*/
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .tab {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    z-index: 1;
+  }
+  .tab_item {
+    display: inline-block;
+    text-align: center;
+    padding: 0.6rem 1.3rem;
+    margin-right: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 2rem;
+    width: 80px;
+    height: 35px;
+    -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+  }
+  .tab_item.active {
+    display: inline-block;
+    border: 1px solid #8fa8ec;
+    background-color: #8fa8ec;
+    color: #fff;
+  }
+
