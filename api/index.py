@@ -202,7 +202,6 @@ def basic_L(question):
 
 
 if __name__ == '__main__':
-    app.run(host, port)
 
 
 
