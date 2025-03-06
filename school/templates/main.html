@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=""utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rag1</title>
+        <link href="{{url_for('static',filename='rag1.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> </head>
+
+    <body>
+        
+        <div id="fullscreen">
+            <div class="sc-searchbox">
+                <input required type="text" 
+                       class="sc-searchbox-field"/>
+                <div class="sc-searchbox-placeholder">
+                </div>
+              </div>
+              <ul class="tab">
+                <li class="tab_item active">
+                    <a href="#tab1">전체</a>
+                </li>
+                <li class="tab_item">
+                    <a href="#tab2">Tab 2</a>
+                </li>
+                <li class="tab_item">
+                    <a href="#tab3">Tab 3</a>
+                </li>
+                <li class="tab_item">
+                    <a href="#tab4">나만의 AI</a>
+                </li>
+            </ul>
+            
+            <div class="ppp">
+                <div class="swiper active" id="tab1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <button class="bbutton">
+                                <div>
+                                    <span>근로법</span>
+                                </div>
+                                <div>근로기준법 전문가</div>
+                            </button></div>
+                            <div class="swiper-slide">
+                            <button class="bbutton">
+                                <div>
+                                    <span>농업</span>
+                                </div>
+                                <div>농업 전문가</div>
+                            </button></div>
+                            <div class="swiper-slide">
+                            <button class="bbutton" onclick="location.href='/ai3'">
+                                <div>
+                                    <span>멀티 AI</span>
+                                </div>
+                                <div>원하는 AI 선택하여 사용</div>
+                            </button></div>
+                            <div class="swiper-slide">
+                            <button class="bbutton">
+                                <div>
+                                    <span>컨설팅</span>
+                                </div>
+                                <div>컨설팅 전문가</div>
+                            </button></div>
+                        </div>
+                    </div>
+                    <div class="swiper" id="tab2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <button class="bbutton">
+                                    <div>
+                                        <span>2222</span>
+                                    </div>
+                                    <div>22222</div>
+                                </button></div>
+                        </div>
+                    </div>
+                    <div class="swiper" id="tab3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <button class="bbutton">
+                                    <div>
+                                        <span>3333</span>
+                                    </div>
+                                    <div>3333</div>
+                                </button></div>
+                        </div>
+                    </div>
+                    <div class="swiper" id="tab4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <button class="bbutton">
+                                    <div>
+                                        <span>FineTuning</span>
+                                    </div>
+                                    <div>데이터로 모델 만들기</div>
+                                </button></div>
+                                <div class="swiper-slide">
+                                    <button class="bbutton">
+                                        <div>
+                                            <span>RAG</span>
+                                        </div>
+                                        <div>PDF파일로 RAG사용</div>
+                                    </button></div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+   
+    <script>
+        const tabItem = document.querySelectorAll(".tab_item");
+const tabContent = document.querySelectorAll(".swiper");
+
+// 탭 버튼들을 forEach 문을 통해 한번씩 순회한다.
+// 이때 index도 같이 가져온다.
+tabItem.forEach((item, index) => {
+  // 탭 버튼에 클릭 이벤트를 준다.
+  item.addEventListener("click", (e) => {
+    // 버튼을 a 태그에 만들었기 때문에, 태그의 기본 동작(링크 연결) 방지를 위해 preventDefault를 추가한다.
+    e.preventDefault(); // a 
+    
+    // 탭 내용 부분들을 forEach 문을 통해 한번씩 순회한다.
+    tabContent.forEach((content) => {
+      // 탭 내용 부분들 전부 active 클래스를 제거한다.
+      content.classList.remove("active");
+    });
+
+    // 탭 버튼들을 forEach 문을 통해 한번씩 순회한다.
+    tabItem.forEach((content) => {
+      // 탭 버튼들 전부 active 클래스를 제거한다.
+      content.classList.remove("active");
+    });
+
+    // 탭 버튼과 탭 내용 영역의 index에 해당하는 부분에 active 클래스를 추가한다.
+    // 만약 첫번째 탭(index 0)을 클릭했다면, 같은 인덱스에 있는 첫번째 탭 내용 영역에
+    // active 클래스가 추가된다.
+    tabItem[index].classList.add("active");
+    tabContent[index].classList.add("active");
+  });
+});
+    </script>
