@@ -8,7 +8,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 import sys
 
-from simil import rag_llama3
+#from simil import rag_llama3
 
 #from database.embedding_chroma import rag_llama
 
